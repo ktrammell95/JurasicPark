@@ -262,6 +262,8 @@ namespace JurasicPark
                 else if (selection == "QUIT")
                 {
                     userHasChosenToQuit = true;
+                    BannerMessage("Thanks for stopping by!");
+
                 }
             }
         }

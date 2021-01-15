@@ -15,13 +15,11 @@ namespace JurasicPark
 
     class Program
     {
+        // static Dinosaur Description(List<Dinosaur> dinosaurDetails)
+        // {
+        //     Console.WriteLine($"The {Name} is a {DietType} that weighs {Weight} pounds")
+        // }
 
-        static void PromptForString()
-        {
-            Console.Write("Please make a selection");
-            var selection = Console.ReadLine();
-
-        }
         static void Main(string[] args)
         {
 
@@ -129,46 +127,77 @@ namespace JurasicPark
             },
         };
 
-            foreach (var dinosaur in dinosaurs)
+
+            var userHasChosenToQuit = false;
+            //       while our boolean is false
+            while (userHasChosenToQuit == false)
             {
-                Console.WriteLine($"{dinosaur.Name}");
+                // - Create a MENU:
 
+                //   - VIEW
+                //   - ADD
+                //   - REMOVE
+                //   - TRANSFER
+                //   - SUMMARY
+                //   - QUIT
+
+                Console.WriteLine("VIEW - View description of dinosaur");
+                Console.WriteLine("ADD - Add a new dinosaur");
+                Console.WriteLine("REMOVE - Remove a dinosaur from the inventory");
+                Console.WriteLine("TRANSFER - Move a dinosaur to a new enclosure");
+                Console.WriteLine("SUMMARY - See the number of dinosaurs by diet");
+                Console.WriteLine("QUIT - Leave the program");
+
+                Console.Write("Make a selection: ");
+                var selection = Console.ReadLine().ToUpper().Trim();
+
+                if (selection == "VIEW")
+                {
+                    foreach (var dinosaur in dinosaurs)
+                    {
+                        Console.WriteLine($"{dinosaur.Name}");
+
+                    }
+                    // Still need message if no dinosaurs
+                }
+                else if (selection == "ADD")
+                {
+                    Console.WriteLine("Added a dinosaur");
+                }
+                else if (selection == "REMOVE")
+                {
+                    Console.WriteLine("Remove a dinosaur");
+                }
+                else if (selection == "TRANSFER")
+                {
+                    Console.WriteLine("Move a dinosaur");
+                }
+                else if (selection == "SUMMARY")
+                {
+                    Console.WriteLine("There are X number of Carnivores and X number of Herbivores");
+                }
+                else if (selection == "QUIT")
+                {
+                    userHasChosenToQuit = true;
+                }
+
+
+                // - When user SELECTS an option from the Menu: (If Statement?)
+                //   - VIEW:
+                //     - Show the all the dinosaurs in the list, ordered by WhenAcquired
+                //     - If there aren't any dinosaurs in the park then print out a message that there aren't any
+                //   - ADD
+                //     - Let the user type in the information for a dinosaur and add it to the list.
+                //     - Prompt for the Name, Diet Type, Weight and Enclosure Number, but the WhenAcquired must be supplied by the code
+                //   - REMOVE
+                //     - Prompt the user for a dinosaur name then find and delete the dinosaur with that name
+                //   - TRANSFER
+                //     - Prompt the user for a dinosaur name and a new EnclosureNumber and update that dino's information
+                //   - SUMMARY
+                //     - Display the number of carnivores and the number of herbivores
+                //   - QUIT
+                //     - Stop the program      
             }
-
-            // - Create a MENU:
-
-            //   - VIEW
-            //   - ADD
-            //   - REMOVE
-            //   - TRANSFER
-            //   - SUMMARY
-            //   - QUIT
-
-            // Console.WriteLine("VIEW");
-            // Console.WriteLine("ADD");
-            // Console.WriteLine("REMOVE");
-            // Console.WriteLine("TRANSFER");
-            // Console.WriteLine("SUMMARY");
-            // Console.WriteLine("QUIT");
-
-            // Console.Write("Make a selection");
-            // var selection = Console.ReadLine();
-
-            // - When user SELECTS an option from the Menu: (If Statement?)
-            //   - VIEW:
-            //     - Show the all the dinosaurs in the list, ordered by WhenAcquired
-            //     - If there aren't any dinosaurs in the park then print out a message that there aren't any
-            //   - ADD
-            //     - Let the user type in the information for a dinosaur and add it to the list.
-            //     - Prompt for the Name, Diet Type, Weight and Enclosure Number, but the WhenAcquired must be supplied by the code
-            //   - REMOVE
-            //     - Prompt the user for a dinosaur name then find and delete the dinosaur with that name
-            //   - TRANSFER
-            //     - Prompt the user for a dinosaur name and a new EnclosureNumber and update that dino's information
-            //   - SUMMARY
-            //     - Display the number of carnivores and the number of herbivores
-            //   - QUIT
-            //     - Stop the program      
         }
     }
 }

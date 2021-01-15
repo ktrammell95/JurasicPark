@@ -234,7 +234,15 @@ namespace JurasicPark
                 }
                 else if (selection == "TRANSFER")
                 {
-                    Console.WriteLine("Move a dinosaur");
+                    Console.WriteLine("What Dinosaur would you like to move to a new enclosure? ");
+                    var dinosaurMoveInput = Console.ReadLine();
+
+                    var dinosaurToMove = dinosaurs.Find(dinosaur => dinosaur.Name == dinosaurMoveInput);
+
+                    Console.WriteLine("What is the new enclosure number? ");
+                    var dinosaurNewEnclosure = Console.ReadLine();
+                    var newDinosaurEnclosure = int.Parse(dinosaurNewEnclosure);
+                    dinosaurToMove.EnclosureNumber = (newDinosaurEnclosure);
                 }
                 else if (selection == "SUMMARY")
                 {

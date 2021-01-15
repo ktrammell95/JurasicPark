@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace JurasicPark
 {
@@ -172,15 +173,15 @@ namespace JurasicPark
                     {
                         foreach (var dinosaur in dinosaurs)
                         {
-                            Console.WriteLine($"The {dinosaur.Name} is a {dinosaur.DietType} that weighs {dinosaur.Weight} pounds. {dinosaur.Name} was placed in enclosure {dinosaur.EnclosureNumber} on {dinosaur.WhenAcquired}. Stop by and say Hi!");
+                            Console.WriteLine($"The {dinosaur.Name} is a {dinosaur.DietType} that weighs {dinosaur.Weight} pounds. {dinosaur.Name} was placed in enclosure {dinosaur.EnclosureNumber} on {dinosaur.WhenAcquired}.");
 
                         }
                     }
                     else
                     {
                         Console.WriteLine("There are no dinosaurs");
-                        Console.WriteLine("-----------------------");
                     }
+                    Console.WriteLine("-----------------------");
 
                 }
                 else if (selection == "ADD")
@@ -222,6 +223,8 @@ namespace JurasicPark
                     };
 
                     dinosaurs.Add(newDinosaur);
+                    Console.WriteLine("-----------------------");
+
                 }
                 else if (selection == "REMOVE")
                 {
@@ -230,6 +233,7 @@ namespace JurasicPark
 
                     var dinosaurToRemove = dinosaurs.Find(dinosaur => dinosaur.Name == dinosaurRemoveInput);
                     dinosaurs.Remove(dinosaurToRemove);
+                    Console.WriteLine("-----------------------");
 
                 }
                 else if (selection == "TRANSFER")
@@ -243,32 +247,22 @@ namespace JurasicPark
                     var dinosaurNewEnclosure = Console.ReadLine();
                     var newDinosaurEnclosure = int.Parse(dinosaurNewEnclosure);
                     dinosaurToMove.EnclosureNumber = (newDinosaurEnclosure);
+                    Console.WriteLine("-----------------------");
+
                 }
                 else if (selection == "SUMMARY")
                 {
-                    Console.WriteLine("There are X number of Carnivores and X number of Herbivores");
+                    var findCarnivores = dinosaurs.Count(dinosaur => dinosaur.DietType == "Carnivore");
+                    var findHerbivores = dinosaurs.Count(dinosaur => dinosaur.DietType == "Herbivore");
+
+                    Console.WriteLine($" There are {findHerbivores} Herbivores and {findCarnivores} Carnivores in the park");
+                    Console.WriteLine("-----------------------");
+
                 }
                 else if (selection == "QUIT")
                 {
                     userHasChosenToQuit = true;
                 }
-
-
-                // - When user SELECTS an option from the Menu: (If Statement?)
-                //   - VIEW:
-                //     - Show the all the dinosaurs in the list, ordered by WhenAcquired
-                //     - If there aren't any dinosaurs in the park then print out a message that there aren't any
-                //   - ADD
-                //     - Let the user type in the information for a dinosaur and add it to the list.
-                //     - Prompt for the Name, Diet Type, Weight and Enclosure Number, but the WhenAcquired must be supplied by the code
-                //   - REMOVE
-                //     - Prompt the user for a dinosaur name then find and delete the dinosaur with that name
-                //   - TRANSFER
-                //     - Prompt the user for a dinosaur name and a new EnclosureNumber and update that dino's information
-                //   - SUMMARY
-                //     - Display the number of carnivores and the number of herbivores
-                //   - QUIT
-                //     - Stop the program      
             }
         }
     }

@@ -44,96 +44,96 @@ namespace JurasicPark
 
             var dinosaurs = new List<Dinosaur>()
             {
-                // new Dinosaur()
-                // {
-                //     Name = "Tyrannosaurus Rex",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "1/19/2020 ",
-                //     Weight = 15000,
-                //     EnclosureNumber = 1,
+                new Dinosaur()
+                {
+                    Name = "Tyrannosaurus Rex",
+                    DietType = "Carnivore",
+                    WhenAcquired = "1/19/2020 ",
+                    Weight = 15000,
+                    EnclosureNumber = 1,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Triceratops",
-                //     DietType = "Herbivore",
-                //     WhenAcquired = "1/1/2021",
-                //     Weight = 24000,
-                //     EnclosureNumber = 2,
+                },
+                new Dinosaur()
+                {
+                    Name = "Triceratops",
+                    DietType = "Herbivore",
+                    WhenAcquired = "1/1/2021",
+                    Weight = 24000,
+                    EnclosureNumber = 2,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Velociraptor",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "1/1/2021",
-                //     Weight = 15,
-                //     EnclosureNumber = 3,
+                },
+                new Dinosaur()
+                {
+                    Name = "Velociraptor",
+                    DietType = "Carnivore",
+                    WhenAcquired = "1/1/2021",
+                    Weight = 15,
+                    EnclosureNumber = 3,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Stegosaurus",
-                //     DietType = "Herbivore",
-                //     WhenAcquired = "1/5/2021",
-                //     Weight = 6800,
-                //     EnclosureNumber = 4,
+                },
+                new Dinosaur()
+                {
+                    Name = "Stegosaurus",
+                    DietType = "Herbivore",
+                    WhenAcquired = "1/5/2021",
+                    Weight = 6800,
+                    EnclosureNumber = 4,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Spinosaurus",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "5/10/2020",
-                //     Weight = 8818,
-                //     EnclosureNumber = 5,
+                },
+                new Dinosaur()
+                {
+                    Name = "Spinosaurus",
+                    DietType = "Carnivore",
+                    WhenAcquired = "5/10/2020",
+                    Weight = 8818,
+                    EnclosureNumber = 5,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Archaeopteryx",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "3/13/2020",
-                //     Weight = 2,
-                //     EnclosureNumber = 6,
+                },
+                new Dinosaur()
+                {
+                    Name = "Archaeopteryx",
+                    DietType = "Carnivore",
+                    WhenAcquired = "3/13/2020",
+                    Weight = 2,
+                    EnclosureNumber = 6,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Brachiosaurus",
-                //     DietType = "Herbivore",
-                //     WhenAcquired = "9/15/2020",
-                //     Weight = 124000,
-                //     EnclosureNumber = 7,
+                },
+                new Dinosaur()
+                {
+                    Name = "Brachiosaurus",
+                    DietType = "Herbivore",
+                    WhenAcquired = "9/15/2020",
+                    Weight = 124000,
+                    EnclosureNumber = 7,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Allosaurus",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "6/1/2020",
-                //     Weight = 4409,
-                //     EnclosureNumber = 8,
+                },
+                new Dinosaur()
+                {
+                    Name = "Allosaurus",
+                    DietType = "Carnivore",
+                    WhenAcquired = "6/1/2020",
+                    Weight = 4409,
+                    EnclosureNumber = 8,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Apatosaurus",
-                //     DietType = "Herbivore",
-                //     WhenAcquired = "8/1/2020 ",
-                //     Weight = 90000,
-                //     EnclosureNumber = 9,
+                },
+                new Dinosaur()
+                {
+                    Name = "Apatosaurus",
+                    DietType = "Herbivore",
+                    WhenAcquired = "8/1/2020 ",
+                    Weight = 90000,
+                    EnclosureNumber = 9,
 
-                // },
-                // new Dinosaur()
-                // {
-                //     Name = "Dilophosaurus",
-                //     DietType = "Carnivore",
-                //     WhenAcquired = "2/12/2020",
-                //     Weight = 661,
-                //     EnclosureNumber = 10,
+                },
+                new Dinosaur()
+                {
+                    Name = "Dilophosaurus",
+                    DietType = "Carnivore",
+                    WhenAcquired = "2/12/2020",
+                    Weight = 661,
+                    EnclosureNumber = 10,
 
-                // },
+                },
             };
 
             var rightNow = DateTime.Now;
@@ -172,7 +172,7 @@ namespace JurasicPark
                     {
                         foreach (var dinosaur in dinosaurs)
                         {
-                            Console.WriteLine($"The {dinosaur.Name} is a {dinosaur.DietType} that weighs {dinosaur.Weight} pounds. {dinosaur.Name} was acquired on {dinosaur.WhenAcquired} and can be found in enclosure {dinosaur.EnclosureNumber}.");
+                            Console.WriteLine($"The {dinosaur.Name} is a {dinosaur.DietType} that weighs {dinosaur.Weight} pounds. {dinosaur.Name} was placed in enclosure {dinosaur.EnclosureNumber} on {dinosaur.WhenAcquired}. Stop by and say Hi!");
 
                         }
                     }
@@ -225,7 +225,12 @@ namespace JurasicPark
                 }
                 else if (selection == "REMOVE")
                 {
-                    Console.WriteLine("Remove a dinosaur");
+                    Console.WriteLine("What Dinosaur would you like to remove? ");
+                    var dinosaurRemoveInput = Console.ReadLine();
+
+                    var dinosaurToRemove = dinosaurs.Find(dinosaur => dinosaur.Name == dinosaurRemoveInput);
+                    dinosaurs.Remove(dinosaurToRemove);
+
                 }
                 else if (selection == "TRANSFER")
                 {
